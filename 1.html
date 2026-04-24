@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project proposal</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Gupter:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap');
+
+
+/*! tailwindcss v4.2.3 | MIT License | https://tailwindcss.com */
+@page { 
+    size: 1920px 1080px; 
+    margin: 0 !important; 
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #1A474C; /* Fallback color to hide gaps */
+  }
+
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: 'Geist', sans-serif;
+    --font-serif: 'Gupter', sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --spacing: 0.25rem;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --blur-sm: 8px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-light: #f9f3f1;
+    --color-dark: #1c4243;
+    --color-green-1: #1a474c;
+    --color-green-2: #75989b;
+    --color-green-3: #1a474c;
+    --color-green-4: #649798;
+    --color-green-5: #24494a;
+    --color-green-6: #b0ced1;
+    --color-green-8: rgba(200, 230, 230, 0.6);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .top-\[37px\] {
+    top: 37px;
+  }
+  .top-\[50\%\] {
+    top: 50%;
+  }
+  .top-\[92px\] {
+    top: 92px;
+  }
+  .top-\[176px\] {
+    top: 176px;
+  }
+  .right-\[-20px\] {
+    right: -20px;
+  }
+  .right-\[-100px\] {
+    right: -100px;
+  }
+  .right-\[30px\] {
+    right: 30px;
+  }
+  .right-\[145px\] {
+    right: 145px;
+  }
+  .right-\[200px\] {
+    right: 200px;
+  }
+  .bottom-\[-40px\] {
+    bottom: -40px;
+  }
+  .bottom-\[30px\] {
+    bottom: 30px;
+  }
+  .bottom-\[80px\] {
+    bottom: 80px;
+  }
+  .bottom-\[100px\] {
+    bottom: 100px;
+  }
+  .bottom-\[220px\] {
+    bottom: 220px;
+  }
+  .bottom-\[370px\] {
+    bottom: 370px;
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-\[40px\] {
+    left: 40px;
+  }
+  .left-\[50\%\] {
+    left: 50%;
+  }
+  .left-\[61px\] {
+    left: 61px;
+  }
+  .left-\[76px\] {
+    left: 76px;
+  }
+  .z-1 {
+    z-index: 1;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-100 {
+    z-index: 100;
+  }
+  .z-300 {
+    z-index: 300;
+  }
+  .z-400 {
+    z-index: 400;
+  }
+  .z-500 {
+    z-index: 500;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .m-auto {
+    margin: auto;
+  }
+  .mx-6 {
+    margin-inline: calc(var(--spacing) * 6);
+  }
+  .mt-\[30px\] {
+    margin-top: 30px;
+  }
+  .mt-\[40px\] {
+    margin-top: 40px;
+  }
+  .mt-\[45px\] {
+    margin-top: 45px;
+  }
+  .mt-\[60px\] {
+    margin-top: 60px;
+  }
+  .mt-\[65px\] {
+    margin-top: 65px;
+  }
+  .mt-\[90px\] {
+    margin-top: 90px;
+  }
+  .mt-\[100px\] {
+    margin-top: 100px;
+  }
+  .mt-\[105px\] {
+    margin-top: 105px;
+  }
+  .mt-\[140px\] {
+    margin-top: 140px;
+  }
+  .mt-auto {
+    margin-top: auto;
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-\[-30px\] {
+    margin-bottom: -30px;
+  }
+  .mb-\[18px\] {
+    margin-bottom: 18px;
+  }
+  .mb-\[28px\] {
+    margin-bottom: 28px;
+  }
+  .ml-\[20px\] {
+    margin-left: 20px;
+  }
+  .ml-\[196px\] {
+    margin-left: 196px;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .table {
+    display: table;
+  }
+  .h-\[76px\] {
+    height: 76px;
+  }
+  .h-\[89px\] {
+    height: 89px;
+  }
+  .h-\[100px\] {
+    height: 100px;
+  }
+  .h-\[140px\] {
+    height: 140px;
+  }
+  .h-\[625px\] {
+    height: 625px;
+  }
+  .h-\[1080px\] {
+    height: 1080px;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .w-\[221px\] {
+    width: 221px;
+  }
+  .w-\[278px\] {
+    width: 278px;
+  }
+  .w-\[300px\] {
+    width: 300px;
+  }
+  .w-\[305px\] {
+    width: 305px;
+  }
+  .w-\[324px\] {
+    width: 324px;
+  }
+  .w-\[327px\] {
+    width: 327px;
+  }
+  .w-\[406px\] {
+    width: 406px;
+  }
+  .w-\[435px\] {
+    width: 435px;
+  }
+  .w-\[440px\] {
+    width: 440px;
+  }
+  .w-\[502px\] {
+    width: 502px;
+  }
+  .w-\[530px\] {
+    width: 530px;
+  }
+  .w-\[625px\] {
+    width: 625px;
+  }
+  .w-\[705px\] {
+    width: 705px;
+  }
+  .w-\[712px\] {
+    width: 712px;
+  }
+  .w-\[1042px\] {
+    width: 1042px;
+  }
+  .w-\[1920px\] {
+    width: 1920px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-\[1280px\] {
+    max-width: 1280px;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .-translate-1\/2 {
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .rotate-\[-17deg\] {
+    rotate: -17deg;
+  }
+  .rotate-\[10deg\] {
+    rotate: 10deg;
+  }
+  .rotate-\[22deg\] {
+    rotate: 22deg;
+  }
+  .rotate-\[180deg\] {
+    rotate: 180deg;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-\[40px\] {
+    gap: 40px;
+  }
+  .gap-\[175px\] {
+    gap: 175px;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-\[64px\] {
+    border-radius: 64px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-light {
+    border-color: var(--color-light);
+  }
+  .bg-\[\#24494A\] {
+    background-color: #24494A;
+  }
+  .bg-green-3 {
+    background-color: var(--color-green-3);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .px-\[35px\] {
+    padding-inline: 35px;
+  }
+  .px-\[54px\] {
+    padding-inline: 54px;
+  }
+  .pt-\[10px\] {
+    padding-top: 10px;
+  }
+  .pt-\[24px\] {
+    padding-top: 24px;
+  }
+  .pt-\[26px\] {
+    padding-top: 26px;
+  }
+  .pt-\[30px\] {
+    padding-top: 30px;
+  }
+  .pt-\[40px\] {
+    padding-top: 40px;
+  }
+  .pt-\[76px\] {
+    padding-top: 76px;
+  }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
+  .pr-8 {
+    padding-right: calc(var(--spacing) * 8);
+  }
+  .pr-\[32px\] {
+    padding-right: 32px;
+  }
+  .pr-\[40px\] {
+    padding-right: 40px;
+  }
+  .pr-\[54px\] {
+    padding-right: 54px;
+  }
+  .pr-\[130px\] {
+    padding-right: 130px;
+  }
+  .pb-\[54px\] {
+    padding-bottom: 54px;
+  }
+  .pb-\[62px\] {
+    padding-bottom: 62px;
+  }
+  .pb-\[80px\] {
+    padding-bottom: 80px;
+  }
+  .pl-\[36px\] {
+    padding-left: 36px;
+  }
+  .pl-\[54px\] {
+    padding-left: 54px;
+  }
+  .pl-\[66px\] {
+    padding-left: 66px;
+  }
+  .pl-\[369px\] {
+    padding-left: 369px;
+  }
+  .pl-\[705px\] {
+    padding-left: 705px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .align-top {
+    vertical-align: top;
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+  .text-\[22px\] {
+    font-size: 22px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
+  .text-\[26px\] {
+    font-size: 26px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
+  .text-\[31px\] {
+    font-size: 31px;
+  }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
+  .text-\[34px\] {
+    font-size: 34px;
+  }
+  .text-\[36px\] {
+    font-size: 36px;
+  }
+  .text-\[46px\] {
+    font-size: 46px;
+  }
+  .text-\[49px\] {
+    font-size: 49px;
+  }
+  .text-\[65px\] {
+    font-size: 65px;
+  }
+  .text-\[100px\] {
+    font-size: 100px;
+  }
+  .text-\[102px\] {
+    font-size: 102px;
+  }
+  .text-\[113px\] {
+    font-size: 113px;
+  }
+  .text-\[122px\] {
+    font-size: 122px;
+  }
+  .text-\[135px\] {
+    font-size: 135px;
+  }
+  .text-\[153px\] {
+    font-size: 153px;
+  }
+  .text-\[166px\] {
+    font-size: 166px;
+  }
+  .text-\[195px\] {
+    font-size: 195px;
+  }
+  .text-\[216px\] {
+    font-size: 216px;
+  }
+  .text-\[227px\] {
+    font-size: 227px;
+  }
+  .text-\[258px\] {
+    font-size: 258px;
+  }
+  .text-\[275px\] {
+    font-size: 275px;
+  }
+  .leading-\[0\.9\] {
+    --tw-leading: 0.9;
+    line-height: 0.9;
+  }
+  .leading-\[1\.3\] {
+    --tw-leading: 1.3;
+    line-height: 1.3;
+  }
+  .leading-\[1\.05\] {
+    --tw-leading: 1.05;
+    line-height: 1.05;
+  }
+  .leading-\[1\.25\] {
+    --tw-leading: 1.25;
+    line-height: 1.25;
+  }
+  .leading-\[1\] {
+    --tw-leading: 1;
+    line-height: 1;
+  }
+  .leading-\[24px\] {
+    --tw-leading: 24px;
+    line-height: 24px;
+  }
+  .leading-\[36px\] {
+    --tw-leading: 36px;
+    line-height: 36px;
+  }
+  .leading-\[40px\] {
+    --tw-leading: 40px;
+    line-height: 40px;
+  }
+  .leading-\[46px\] {
+    --tw-leading: 46px;
+    line-height: 46px;
+  }
+  .leading-\[48px\] {
+    --tw-leading: 48px;
+    line-height: 48px;
+  }
+  .leading-\[52px\] {
+    --tw-leading: 52px;
+    line-height: 52px;
+  }
+  .leading-\[60px\] {
+    --tw-leading: 60px;
+    line-height: 60px;
+  }
+  .leading-\[87px\] {
+    --tw-leading: 87px;
+    line-height: 87px;
+  }
+  .leading-\[96px\] {
+    --tw-leading: 96px;
+    line-height: 96px;
+  }
+  .leading-\[110px\] {
+    --tw-leading: 110px;
+    line-height: 110px;
+  }
+  .leading-\[130px\] {
+    --tw-leading: 130px;
+    line-height: 130px;
+  }
+  .leading-\[169px\] {
+    --tw-leading: 169px;
+    line-height: 169px;
+  }
+  .leading-\[208px\] {
+    --tw-leading: 208px;
+    line-height: 208px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[-0\.04em\] {
+    --tw-tracking: -0.04em;
+    letter-spacing: -0.04em;
+  }
+  .tracking-\[-0\.07em\] {
+    --tw-tracking: -0.07em;
+    letter-spacing: -0.07em;
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .tracking-tighter {
+    --tw-tracking: var(--tracking-tighter);
+    letter-spacing: var(--tracking-tighter);
+  }
+  .text-green-2 {
+    color: var(--color-green-2);
+  }
+  .text-green-3 {
+    color: var(--color-green-3);
+  }
+  .text-green-4 {
+    color: var(--color-green-4);
+  }
+  .text-green-5 {
+    color: var(--color-green-5);
+  }
+  .text-green-6 {
+    color: var(--color-green-6);
+  }
+  .text-green-8 {
+    color: var(--color-green-8);
+  }
+  .text-light {
+    color: var(--color-light);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .opacity-50 {
+    opacity: 50%;
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-sm {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+    }
+  }
+}
+
+
+
+    .title-gradient {
+      /* Your existing gradient */
+      background: linear-gradient(120.72deg, rgba(152, 176, 178, 0) 50.51%, #98B0B2 73.7%), linear-gradient(0deg, #F9F3F1, #F9F3F1), linear-gradient(70.62deg, rgba(255, 210, 177, 0) 45.56%, #E5C5AD 80.24%), #F8F2F0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+      /* --- THE FIXES --- */
+      
+      /* 1. Expand the box outward, then pull it back in. 
+            This moves the buggy edge away from your text's anti-aliasing */
+      padding-left: 20px;
+      margin-left: -20px;
+      
+      /* 2. Force the browser to render this mask on a separate hardware-accelerated layer */
+      transform: translateZ(0);
+      will-change: transform;
+      
+      /* 3. Tell Chromium to calculate the background for each line of text independently */
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .card-1:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      border-radius: 46px;
+      top: 0;
+      left: 0;
+      /* top: 1px;
+      left: 1px; */
+      width: 100%;
+      height: 100%;
+      background: rgba(35, 77, 81, 0.7);
+      border: 1px solid rgba(255, 245, 238, 0.3);
+    }
+
+    #client-name:after {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
+      background: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.707153 13L6.70715 7L12.7072 1M12.7072 1H1.48135M12.7072 1V12.6129" stroke="%23F6FAFE" stroke-width="2"/></svg>');
+    }
+
+    .card-2 {
+      background: rgba(255, 245, 238, 0.1);
+      backdrop-filter: blur(3.87042px);
+      border-radius: 42px;
+      width: 438px;
+      height: 600px;
+    }
+
+    .card-2:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      border-radius: 46px;
+      top: 0;
+      left: 0;
+      /* top: 1px;
+      left: 1px; */
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(200.41deg, rgba(251, 247, 246, 0) 5.25%, rgba(251, 247, 246, 0.7) 109.38%), rgba(81, 121, 125, 0.3);
+      border-radius: 42px;
+      border: 1px solid rgba(255, 245, 238, 0.3);
+    }
+
+
+    .card-3 {
+      border-radius: 42px;
+      width: 415px;
+      height: 570px;
+
+      background: rgba(255, 245, 238, 0.1);
+      backdrop-filter: blur(3.67337px);
+
+
+    }
+
+
+    .card-3:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      border-radius: 46px;
+      top: 0;
+      left: 0;
+      /* top: 1px;
+      left: 1px; */
+      width: 100%;
+      height: 100%;
+      background: rgba(81, 121, 125, 0.3);
+      border-radius: 42px;
+      border: 1px solid rgba(255, 245, 238, 0.3);
+
+    }
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+  <div class="overflow-hidden w-[1920px] h-[1080px]">
+
+    <div class="absolute z-1 left-0 top-0 w-[3840px] h-[2160px]">
+      <img alt="" src="https:/www.dl.dropboxusercontent.com/scl/fi/qhe07bg50e0fut2fi8jey/bg-1.jpg?rlkey=25ps4ce25bh7lnpr5pens5ulo&st=x49z414r&dl=0"/>
+    </div>
+    <div class="content relative z-100 tracking-tight w-full h-full font-sans text-light">
+      <div class="absolute top-[37px] left-[61px] flex">
+        <div id="company-logo" class="">
+          <svg width="173" height="39" viewBox="0 0 173 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M167.55 2.19764V10.3199H173V15.2981H167.55V28.713C167.55 31.2284 168.179 31.8571 170.694 31.8571C171.533 31.8571 172.319 31.8049 173 31.6475V37.4641C171.742 37.6738 170.118 37.7262 168.651 37.7262C164.039 37.7262 160.109 36.7307 160.109 31.2807V15.2981V10.3199V2.19764H167.55Z" fill="#85A6A8" />
+            <path d="M131.764 28.7282H138.839C138.839 31.9247 141.668 33.2872 144.55 33.2872C146.647 33.2872 149.424 32.4487 149.424 29.8287C149.424 27.5754 146.28 26.737 140.987 25.6365C136.638 24.6408 132.393 23.226 132.393 18.4049C132.393 11.4879 138.367 9.70625 144.184 9.70625C150.053 9.70625 155.555 11.6975 156.131 18.3527H149.057C148.848 15.4704 146.647 14.6845 143.974 14.6845C142.297 14.6845 139.834 14.9464 139.834 17.1998C139.834 19.8722 144.079 20.239 148.271 21.2347C152.62 22.2303 156.865 23.8025 156.865 28.833C156.865 35.9597 150.629 38.2655 144.498 38.2655C138.21 38.2655 132.026 35.9072 131.764 28.7282Z" fill="#85A6A8" />
+            <path d="M110.094 21.0776H122.199C121.517 17.3045 119.893 15.3132 116.277 15.3132C111.456 15.3132 110.251 18.9814 110.094 21.0776ZM129.64 25.7937H110.094C110.303 30.5623 112.557 32.6583 116.749 32.6583C119.736 32.6583 122.146 30.8242 122.618 29.1475H129.168C127.072 35.5929 122.618 38.2655 116.487 38.2655C107.945 38.2655 102.653 32.3964 102.653 24.0121C102.653 15.8897 108.26 9.70625 116.487 9.70625C125.71 9.70625 130.216 17.4618 129.64 25.7937Z" fill="#85A6A8" />
+            <path d="M95.9552 2.31034V10.4328H101.405V15.4108H95.9552V28.8258C95.9552 31.3411 96.5841 31.97 99.0993 31.97C99.9377 31.97 100.724 31.9176 101.405 31.7604V37.577C100.147 37.7866 98.5229 37.8391 97.0556 37.8391C92.4442 37.8391 88.5141 36.8434 88.5141 31.3936V15.4108V10.4328V2.31034H95.9552Z" fill="#85A6A8" />
+            <path d="M79.037 2.19764V10.32H84.4868V15.2982H79.037V28.7131C79.037 31.2284 79.6657 31.8573 82.181 31.8573C83.0195 31.8573 83.8056 31.8048 84.4868 31.6476V37.4642C83.2292 37.6739 81.6047 37.7263 80.1375 37.7263C75.526 37.7263 71.5959 36.7306 71.5959 31.2808V15.2982V10.32V2.19764H79.037Z" fill="#85A6A8" />
+            <path d="M66.207 0V6.13104H58.7658V0H66.207ZM58.7658 37.415V10.3232H66.207V37.415H58.7658Z" fill="#85A6A8" />
+            <path d="M28.4743 37.415V0H35.9153V14.0962H36.0727C37.959 11.0044 41.2079 9.58958 43.9853 9.58958C51.898 9.58958 53.8893 14.0438 53.8893 20.7513V37.415H46.4483V22.1136C46.4483 17.6595 45.1906 15.4586 41.6796 15.4586C37.6447 15.4586 35.9153 17.7118 35.9153 23.2141V37.415H28.4743Z" fill="#85A6A8" />
+            <path d="M0 28.6084H7.07423C7.07423 31.8051 9.90403 33.1674 12.7861 33.1674C14.8821 33.1674 17.6595 32.3291 17.6595 29.7089C17.6595 27.4555 14.5153 26.6172 9.22268 25.5167C4.87334 24.5212 0.628728 23.1062 0.628728 18.2853C0.628728 11.3682 6.60269 9.58651 12.4193 9.58651C18.2884 9.58651 23.7906 11.5778 24.3669 18.2329H17.2926C17.083 15.3507 14.8821 14.5647 12.2097 14.5647C10.5328 14.5647 8.06996 14.8267 8.06996 17.0799C8.06996 19.7526 12.3144 20.1194 16.5066 21.1149C20.8561 22.1106 25.1005 23.6826 25.1005 28.7133C25.1005 35.8399 18.8648 38.1457 12.7337 38.1457C6.44551 38.1457 0.262086 35.7876 0 28.6084Z" fill="#85A6A8" />
+          </svg>
+        </div>
+        <div id="company-slogan" class="text-green-2 font-sans font-medium text-[22px] leading-[24px] ml-[196px]">Test the risk. <br>Protect your business.</div>
+      </div>
+      <div class="absolute top-[176px] left-[61px] max-w-[1280px]">
+        <div id="document-type" class="pl-[369px] font-sans text-[32px] leading-[60px]">Project proposal</div>
+<!-- THE FIXED WAY (Smooth text clip) -->
+<h1 id="document-title" class="title-gradient border-none text-[135px] font-normal font-sans leading-[130px] tracking-tighter">
+  <span class="pl-[369px]">Canada market</span><br>
+  readiness <span class="font-serif tracking-tight text-[166px]">& platform assessment</span>
+</h1>
+      </div>
+      <p id="proposal-summary" class="absolute bottom-[80px] left-[76px] font-medium text-[36px] w-[625px] leading-[52px]">This proposal identifies and mitigates technical gaps to ensure the platform is 100 % user-ready for launch</p>
+
+      <div id="cards">
+        <div class="card-1 absolute z-500 right-[200px] bottom-[100px] rotate-[10deg]">
+          <div class="relative h-full z-100 p-10 flex flex-col justify-between">
+            <div id="card-logo">
+              <svg width="246" height="64" viewBox="0 0 246 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2037_40)">
+                  <path d="M105.444 25.2118V29.196H115.554V35.0073H105.447V44.5092H99.397V19.4024H116.549V25.2137H105.445L105.444 25.2118ZM138.939 24.778L138.907 44.5073H132.858V42.3905C131.613 43.9296 129.834 44.9737 127.344 44.9737C122.363 44.9737 118.515 40.7438 118.515 34.6388C118.515 28.5032 122.428 24.3059 127.304 24.3059C129.794 24.3059 131.645 25.3807 132.891 26.9947V24.7685H138.939V24.778ZM132.891 34.6484C132.891 31.9174 131.111 30.1249 128.758 30.1249C126.413 30.1249 124.634 31.9174 124.634 34.6484C124.634 37.4102 126.445 39.1701 128.758 39.1701C131.104 39.1624 132.891 37.4102 132.891 34.6465V34.6484ZM150.763 18.936C150.763 20.9819 149.234 22.4482 147.098 22.4482C145.039 22.4482 143.437 20.9819 143.437 18.936C143.437 16.9324 145.039 15.4565 147.098 15.4565C149.226 15.4565 150.763 16.9247 150.763 18.936ZM144.067 24.78H150.115V44.5092H144.067V24.78ZM168.098 24.4172V30.693C167.711 30.6604 167.46 30.6201 166.886 30.6201C164.039 30.6201 161.299 31.4837 161.299 35.965V44.4977H155.25V24.7761H161.299V27.8238C162.511 25.4191 164.502 24.3117 166.99 24.3117C167.452 24.3117 167.81 24.3443 168.098 24.4172ZM170.219 38.268H176.34C176.591 39.3428 177.375 40.3868 180.18 40.3868C182.211 40.3868 182.85 39.8494 182.85 39.0242C182.85 38.2354 182.243 38.055 178.904 37.3372C173.317 36.1166 171.035 34.6081 171.035 31.1363C171.035 26.8661 174.416 24.3558 180.075 24.3558C185.592 24.3558 188.301 26.7606 188.898 30.5241H182.777C182.525 29.5952 181.742 28.9446 179.825 28.9446C178.046 28.9446 177.158 29.482 177.158 30.3456C177.158 31.0308 177.73 31.0941 180.075 31.6008C185.916 32.8885 189.075 34.0784 189.075 38.1606C189.075 42.7167 185.128 44.9737 180.108 44.9737C174.805 44.9737 170.93 42.4327 170.219 38.268ZM212.873 34.6446C212.873 40.7419 209.034 44.9794 204.042 44.9794C201.554 44.9794 199.775 43.9354 198.49 42.3962V51.9576H192.439V24.7761H198.49V27.0024C199.735 25.3864 201.584 24.3117 204.077 24.3117C208.96 24.3117 212.873 28.509 212.873 34.6446ZM206.752 34.6446C206.752 31.9155 204.973 30.1211 202.627 30.1211C200.276 30.1211 198.497 31.9155 198.497 34.6446C198.497 37.4082 200.276 39.1681 202.627 39.1681C204.933 39.1605 206.752 37.4082 206.752 34.6446ZM222.771 18.936C222.771 20.9819 221.242 22.4482 219.108 22.4482C217.047 22.4482 215.443 20.9819 215.443 18.936C215.443 16.9324 217.047 15.4565 219.108 15.4565C221.234 15.4565 222.771 16.9247 222.771 18.936ZM216.074 24.78H222.125V44.5092H216.074V24.78ZM244.477 32.1669V44.5073H238.43V33.5296C238.43 31.3781 237.789 30.123 235.331 30.123C232.946 30.123 231.733 31.3033 231.733 34.0343V44.5073H225.683V24.7761H231.733V27.0024C233.156 25.2406 234.975 24.3117 237.393 24.3117C241.809 24.3117 244.477 27.3594 244.477 32.1669Z" fill="#F9F3F1" />
+                  <path d="M26.2857 48.5291C27.9199 51.3983 29.5502 53.354 30.9708 55.989C31.7278 57.2979 30.1108 60.9137 28.6597 61.0173H23.3397L23.8354 58.9216C24.4551 58.198 25.0177 57.5436 25.5649 56.9179C25.2778 56.4073 24.9764 55.9049 24.6611 55.4114L26.2857 48.5291ZM62.2448 2.54345C61.9349 4.31953 61.1218 5.96767 59.9032 7.2896C58.5722 8.71748 56.6158 9.93809 53.0253 11.579C45.3598 15.0815 38.8918 18.2559 36.7314 19.2135C34.569 20.1712 33.2113 21.0176 32.6793 22.1729L33.2895 23.9635C34.7949 23.2117 36.3143 22.4887 37.8469 21.7948C48.9179 16.6955 56.1773 13.3408 58.5761 12.2142C60.0806 11.5099 61.3448 10.9341 61.3848 10.9399C61.4268 10.9437 61.3944 11.366 61.3124 11.8803C61.0036 13.6563 60.191 15.3046 58.9727 16.6265C57.6398 18.0543 55.6815 19.2749 52.0928 20.9158C47.6418 22.9468 43.2038 25.0068 38.7793 27.0956L39.7041 27.3355C40.7014 27.5927 41.6968 27.8537 42.694 28.1128C48.9599 25.2225 53.1359 23.288 54.8444 22.4857C56.3489 21.7795 57.6112 21.2056 57.6532 21.2095C57.6951 21.2152 57.6608 21.6375 57.5807 22.1499C57.2706 23.9265 56.4576 25.5752 55.2391 26.898C54.2018 28.0111 52.7831 28.9995 50.5082 30.1567C53.6908 30.9974 56.8714 31.8495 60.0481 32.7189C60.8719 32.9607 61.8272 33.5825 62.2887 34.3041C65.0059 38.4879 67.6488 42.7255 70.2821 46.9439L71.4834 48.8727C72.0784 49.8016 72.5398 50.2161 73.5619 49.3544C74.0844 48.9226 74.7708 48.4198 75.4973 48.4178C76.2238 48.4159 79.9136 50.3313 80.682 50.6978C79.7133 51.2697 76.6738 53.638 75.2666 53.6169C74.2484 53.6035 71.8743 52.8109 70.4843 51.2179C68.36 48.7863 63.8694 42.8886 61.7605 39.9177C61.4478 41.7621 60.8433 44.5699 61.7281 46.2549C62.7253 48.128 64.2718 49.6365 65.454 51.3868C65.7839 51.8705 65.9479 52.7648 65.7496 53.2811C64.6398 56.1944 63.1315 58.8889 61.9264 61.7543C61.7605 62.1324 61.2323 62.6697 60.9005 62.6697H54.5889C55.2334 61.1862 54.8615 59.3035 56.818 58.8256C58.1356 58.5147 59.7831 55.6225 59.2568 54.35C58.9651 53.5881 51.414 49.7632 50.3576 49.2508C49.0705 48.6309 49.0762 47.8421 49.1696 46.5313C49.2612 45.2454 49.3451 43.9308 49.4328 42.6392C42.9019 44.1361 36.3729 45.6427 29.821 47.0475C29.1955 47.1857 28.3051 46.8748 27.8112 46.4276C27.0294 45.7444 26.3181 44.9767 25.5516 44.1515C25.1026 43.664 24.6468 43.1828 24.1844 42.7082C23.3549 47.5945 22.2566 52.5268 21.2955 57.3996C20.979 58.9983 19.9607 60.3821 19.1408 61.8214C18.9101 62.2014 18.4334 62.6697 18.0692 62.6697H12.5203C12.8578 60.4473 13.0008 59.5069 13.5557 59.0214C13.9695 58.6567 14.6159 58.555 15.7466 58.3784C14.2479 52.9817 12.7376 47.5868 11.2312 42.1901C10.1615 42.5931 9.43882 42.9002 7.81419 43.5066C7.20401 37.987 6.98091 34.2485 6.48322 28.5868C6.42983 26.6408 7.45952 24.6871 8.5121 23.9347C9.10321 23.5125 9.68671 23.3878 10.5181 23.0769H4.57257C3.40178 23.0769 3.25304 22.8005 2.89074 21.9388C2.08511 19.9723 1.21705 18.0322 0.287913 16.1217C-0.173541 15.1237 -0.139218 14.571 0.882846 13.9166C3.67062 12.158 6.44389 10.3763 9.20237 8.57162C11.1473 7.30688 13.0923 6.04213 15.0564 4.79082C15.5178 4.51446 16.21 4.51446 16.7382 4.61809C19.3753 5.20345 22.0106 5.82334 24.5829 6.5795C24.8594 6.66203 25.1397 6.72728 25.42 6.79445C26.8063 7.12072 28.1544 7.4393 28.7017 9.47364C29.3772 11.9419 30.1115 14.3934 30.9041 16.8261C31.7488 15.2926 36.2909 13.6057 38.7793 12.4599C49.8523 7.36061 57.1116 4.00587 59.5104 2.87931C61.0168 2.17305 62.2791 1.59921 62.3211 1.60305C62.3611 1.6088 62.3287 2.03103 62.2467 2.54345H62.2448ZM46.6088 46.656C45.7507 49.6864 47.6957 50.8226 49.6063 51.9261C49.9686 52.1084 50.5216 52.5498 50.3976 53.6131C50.1986 55.5463 49.9576 57.4749 49.675 59.3975L49.4747 60.8446C49.3756 61.6372 49.2345 62.2206 48.2219 62.2226H42.4557C43.1154 60.0846 43.6761 59.363 45.4532 58.6413C46.0062 58.3919 46.2026 58.0311 46.2541 57.6434C46.359 56.8488 46.0539 54.7128 45.3217 54.4383C43.9049 53.8875 42.4233 53.544 40.9378 53.2676C38.2034 52.7494 36.6189 51.3408 36.0602 48.652C39.5744 47.9803 43.0964 47.3431 46.6088 46.656Z" fill="#F9F3F1" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2037_40">
+                    <rect width="245.982" height="63.3333" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="flex mt-auto">
+              <div class="flex flex-col">
+                <div id="prepared-date-label" class="text-[20px]">Prepared date</div>
+                <div id="prepared-date-value" class="text-[24px] font-semibold">February 05, 2026</div>
+              </div>
+              <div class="mx-6 pt-[40px]">
+                <svg width="59" height="18" viewBox="0 0 59 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 8.89857H57.4891M49.5929 0.707092L57.5929 8.70709L49.5929 16.7071" stroke="#F6FAFE" stroke-width="2" />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <div id="valid-until-label" class="text-[20px]">Valid until</div>
+                <div id="valid-until-value" class="text-[24px] font-semibold">March 07, 2026 <span class="text-[20px] font-light">(30 days)</span></div>
+              </div>
+            </div>
+            <div class="mt-[40px]">
+              <div id="client-label" class="text-[20px]">Client</div>
+              <a href="https://fairspin.com" target="_blank" id="client-name" class="text-[49px]  leading-[48px] font-medium font-serif">Fairspin</a>
+            </div>
+          </div>
+        </div> <!--/card1-->
+        <div class="card-2 absolute z-400 right-[145px] bottom-[220px] rotate-[-17deg]">
+          <div class="relative h-full z-100 p-10 flex flex-col justify-between">
+            <div id="card2-logo-1"><svg width="246" height="64" viewBox="0 0 246 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M105.444 25.2118V29.196H115.554V35.0073H105.447V44.5092H99.397V19.4024H116.549V25.2137H105.445L105.444 25.2118ZM138.939 24.778L138.907 44.5073H132.858V42.3905C131.613 43.9296 129.834 44.9737 127.344 44.9737C122.363 44.9737 118.515 40.7438 118.515 34.6388C118.515 28.5032 122.428 24.3059 127.304 24.3059C129.794 24.3059 131.645 25.3807 132.891 26.9947V24.7685H138.939V24.778ZM132.891 34.6484C132.891 31.9174 131.111 30.1249 128.758 30.1249C126.413 30.1249 124.634 31.9174 124.634 34.6484C124.634 37.4102 126.445 39.1701 128.758 39.1701C131.104 39.1624 132.891 37.4102 132.891 34.6465V34.6484ZM150.763 18.936C150.763 20.9819 149.234 22.4482 147.098 22.4482C145.039 22.4482 143.437 20.9819 143.437 18.936C143.437 16.9324 145.039 15.4565 147.098 15.4565C149.226 15.4565 150.763 16.9247 150.763 18.936ZM144.067 24.78H150.115V44.5092H144.067V24.78ZM168.098 24.4172V30.693C167.711 30.6604 167.46 30.6201 166.886 30.6201C164.039 30.6201 161.299 31.4837 161.299 35.965V44.4977H155.25V24.7761H161.299V27.8238C162.511 25.4191 164.502 24.3117 166.99 24.3117C167.452 24.3117 167.81 24.3443 168.098 24.4172ZM170.219 38.268H176.34C176.591 39.3428 177.375 40.3868 180.18 40.3868C182.211 40.3868 182.85 39.8494 182.85 39.0242C182.85 38.2354 182.243 38.055 178.904 37.3372C173.317 36.1166 171.035 34.6081 171.035 31.1363C171.035 26.8661 174.416 24.3558 180.075 24.3558C185.592 24.3558 188.301 26.7606 188.898 30.5241H182.777C182.525 29.5952 181.742 28.9446 179.825 28.9446C178.046 28.9446 177.158 29.482 177.158 30.3456C177.158 31.0308 177.73 31.0941 180.075 31.6008C185.916 32.8885 189.075 34.0784 189.075 38.1606C189.075 42.7167 185.128 44.9737 180.108 44.9737C174.805 44.9737 170.93 42.4327 170.219 38.268ZM212.873 34.6446C212.873 40.7419 209.034 44.9794 204.042 44.9794C201.554 44.9794 199.775 43.9354 198.49 42.3962V51.9576H192.439V24.7761H198.49V27.0024C199.735 25.3864 201.584 24.3117 204.077 24.3117C208.96 24.3117 212.873 28.509 212.873 34.6446ZM206.752 34.6446C206.752 31.9155 204.973 30.1211 202.627 30.1211C200.276 30.1211 198.497 31.9155 198.497 34.6446C198.497 37.4082 200.276 39.1681 202.627 39.1681C204.933 39.1605 206.752 37.4082 206.752 34.6446ZM222.771 18.936C222.771 20.9819 221.242 22.4482 219.108 22.4482C217.047 22.4482 215.443 20.9819 215.443 18.936C215.443 16.9324 217.047 15.4565 219.108 15.4565C221.234 15.4565 222.771 16.9247 222.771 18.936ZM216.074 24.78H222.125V44.5092H216.074V24.78ZM244.477 32.1669V44.5073H238.43V33.5296C238.43 31.3781 237.789 30.123 235.331 30.123C232.946 30.123 231.733 31.3033 231.733 34.0343V44.5073H225.683V24.7761H231.733V27.0024C233.156 25.2406 234.975 24.3117 237.393 24.3117C241.809 24.3117 244.477 27.3594 244.477 32.1669Z" fill="#1A474C" />
+                <path d="M26.2857 48.5291C27.9199 51.3983 29.5502 53.354 30.9708 55.989C31.7278 57.2979 30.1108 60.9137 28.6597 61.0173H23.3397L23.8354 58.9216C24.4551 58.198 25.0177 57.5436 25.5649 56.9179C25.2778 56.4073 24.9764 55.9049 24.6611 55.4114L26.2857 48.5291ZM62.2448 2.54345C61.9349 4.31953 61.1218 5.96767 59.9032 7.2896C58.5723 8.71748 56.6158 9.93809 53.0253 11.579C45.3598 15.0815 38.8918 18.2558 36.7314 19.2135C34.569 20.1712 33.2113 21.0176 32.6793 22.1729L33.2895 23.9635C34.7949 23.2118 36.3143 22.4887 37.8469 21.7948C48.9179 16.6955 56.1773 13.3408 58.5761 12.2142C60.0806 11.5099 61.3448 10.9341 61.3848 10.9399C61.4268 10.9437 61.3944 11.366 61.3124 11.8803C61.0036 13.6563 60.191 15.3046 58.9727 16.6265C57.6398 18.0543 55.6815 19.2749 52.0928 20.9158C47.6418 22.9468 43.2038 25.0068 38.7793 27.0956L39.7041 27.3355C40.7014 27.5927 41.6968 27.8537 42.694 28.1128C48.9599 25.2225 53.1359 23.288 54.8444 22.4857C56.3489 21.7795 57.6112 21.2056 57.6532 21.2095C57.6951 21.2152 57.6608 21.6375 57.5807 22.1499C57.2706 23.9265 56.4576 25.5752 55.2391 26.898C54.2018 28.0111 52.7831 28.9995 50.5082 30.1567C53.6908 30.9974 56.8714 31.8495 60.0481 32.7189C60.8719 32.9607 61.8272 33.5825 62.2887 34.3041C65.0059 38.4879 67.6488 42.7255 70.2821 46.9439L71.4834 48.8727C72.0784 49.8016 72.5398 50.2161 73.5619 49.3544C74.0844 48.9226 74.7708 48.4198 75.4973 48.4178C76.2238 48.4159 79.9136 50.3313 80.682 50.6978C79.7133 51.2697 76.6738 53.638 75.2666 53.6169C74.2484 53.6035 71.8743 52.8109 70.4843 51.2179C68.36 48.7863 63.8694 42.8886 61.7605 39.9177C61.4478 41.7621 60.8433 44.5699 61.7281 46.2549C62.7253 48.128 64.2718 49.6365 65.454 51.3868C65.7839 51.8705 65.9479 52.7648 65.7496 53.2811C64.6398 56.1944 63.1315 58.8889 61.9264 61.7543C61.7605 62.1324 61.2323 62.6697 60.9005 62.6697H54.5889C55.2334 61.1862 54.8615 59.3035 56.818 58.8256C58.1356 58.5147 59.7831 55.6225 59.2568 54.35C58.9651 53.5881 51.414 49.7632 50.3576 49.2508C49.0705 48.6309 49.0762 47.8421 49.1696 46.5313C49.2612 45.2454 49.3451 43.9308 49.4328 42.6392C42.9019 44.1361 36.3729 45.6427 29.821 47.0475C29.1955 47.1857 28.305 46.8748 27.8112 46.4276C27.0294 45.7444 26.3181 44.9767 25.5516 44.1515C25.1026 43.664 24.6468 43.1828 24.1844 42.7082C23.3549 47.5945 22.2566 52.5268 21.2955 57.3996C20.979 58.9983 19.9607 60.3821 19.1408 61.8214C18.9101 62.2015 18.4334 62.6697 18.0692 62.6697H12.5203C12.8578 60.4473 13.0008 59.5069 13.5557 59.0214C13.9695 58.6567 14.6159 58.555 15.7466 58.3784C14.2479 52.9817 12.7376 47.5868 11.2312 42.1901C10.1615 42.5931 9.43882 42.9002 7.81419 43.5066C7.20401 37.987 6.98091 34.2485 6.48322 28.5868C6.42983 26.6408 7.45952 24.6871 8.5121 23.9347C9.10321 23.5125 9.68671 23.3878 10.5181 23.0769H4.57257C3.40178 23.0769 3.25304 22.8005 2.89074 21.9388C2.08511 19.9723 1.21705 18.0322 0.287913 16.1217C-0.173541 15.1237 -0.139218 14.571 0.882846 13.9166C3.67062 12.158 6.44389 10.3763 9.20237 8.57162C11.1473 7.30688 13.0923 6.04213 15.0564 4.79082C15.5178 4.51446 16.21 4.51446 16.7382 4.61809C19.3753 5.20345 22.0106 5.82334 24.5829 6.5795C24.8594 6.66203 25.1397 6.72728 25.42 6.79445C26.8063 7.12072 28.1544 7.4393 28.7017 9.47364C29.3772 11.9419 30.1115 14.3934 30.9041 16.8261C31.7488 15.2926 36.2909 13.6057 38.7793 12.4599C49.8523 7.36061 57.1116 4.00587 59.5104 2.87931C61.0168 2.17305 62.2791 1.59921 62.3211 1.60305C62.3611 1.6088 62.3287 2.03103 62.2467 2.54345H62.2448ZM46.6088 46.656C45.7507 49.6864 47.6957 50.8226 49.6063 51.9261C49.9686 52.1084 50.5216 52.5498 50.3976 53.6131C50.1986 55.5463 49.9576 57.4749 49.675 59.3975L49.4747 60.8446C49.3756 61.6372 49.2345 62.2206 48.2219 62.2226H42.4557C43.1154 60.0846 43.6761 59.363 45.4532 58.6413C46.0062 58.3919 46.2026 58.0311 46.2541 57.6434C46.359 56.8488 46.0539 54.7128 45.3217 54.4383C43.9049 53.8875 42.4233 53.544 40.9378 53.2676C38.2034 52.7494 36.6189 51.3408 36.0602 48.652C39.5744 47.9803 43.0964 47.3431 46.6088 46.656Z" fill="#1A474C" />
+              </svg>
+            </div>
+            <div id="card2-logo-2" class="rotate-[180deg] absolute bottom-[30px] right-[30px]">
+              <svg width="246" height="64" viewBox="0 0 246 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M105.444 25.2118V29.196H115.554V35.0073H105.447V44.5092H99.397V19.4024H116.549V25.2137H105.445L105.444 25.2118ZM138.939 24.778L138.907 44.5073H132.858V42.3905C131.613 43.9296 129.834 44.9737 127.344 44.9737C122.363 44.9737 118.515 40.7438 118.515 34.6388C118.515 28.5032 122.428 24.3059 127.304 24.3059C129.794 24.3059 131.645 25.3807 132.891 26.9947V24.7685H138.939V24.778ZM132.891 34.6484C132.891 31.9174 131.111 30.1249 128.758 30.1249C126.413 30.1249 124.634 31.9174 124.634 34.6484C124.634 37.4102 126.445 39.1701 128.758 39.1701C131.104 39.1624 132.891 37.4102 132.891 34.6465V34.6484ZM150.763 18.936C150.763 20.9819 149.234 22.4482 147.098 22.4482C145.039 22.4482 143.437 20.9819 143.437 18.936C143.437 16.9324 145.039 15.4565 147.098 15.4565C149.226 15.4565 150.763 16.9247 150.763 18.936ZM144.067 24.78H150.115V44.5092H144.067V24.78ZM168.098 24.4172V30.693C167.711 30.6604 167.46 30.6201 166.886 30.6201C164.039 30.6201 161.299 31.4837 161.299 35.965V44.4977H155.25V24.7761H161.299V27.8238C162.511 25.4191 164.502 24.3117 166.99 24.3117C167.452 24.3117 167.81 24.3443 168.098 24.4172ZM170.219 38.268H176.34C176.591 39.3428 177.375 40.3868 180.18 40.3868C182.211 40.3868 182.85 39.8494 182.85 39.0242C182.85 38.2354 182.243 38.055 178.904 37.3372C173.317 36.1166 171.035 34.6081 171.035 31.1363C171.035 26.8661 174.416 24.3558 180.075 24.3558C185.592 24.3558 188.301 26.7606 188.898 30.5241H182.777C182.525 29.5952 181.742 28.9446 179.825 28.9446C178.046 28.9446 177.158 29.482 177.158 30.3456C177.158 31.0308 177.73 31.0941 180.075 31.6008C185.916 32.8885 189.075 34.0784 189.075 38.1606C189.075 42.7167 185.128 44.9737 180.108 44.9737C174.805 44.9737 170.93 42.4327 170.219 38.268ZM212.873 34.6446C212.873 40.7419 209.034 44.9794 204.042 44.9794C201.554 44.9794 199.775 43.9354 198.49 42.3962V51.9576H192.439V24.7761H198.49V27.0024C199.735 25.3864 201.584 24.3117 204.077 24.3117C208.96 24.3117 212.873 28.509 212.873 34.6446ZM206.752 34.6446C206.752 31.9155 204.973 30.1211 202.627 30.1211C200.276 30.1211 198.497 31.9155 198.497 34.6446C198.497 37.4082 200.276 39.1681 202.627 39.1681C204.933 39.1605 206.752 37.4082 206.752 34.6446ZM222.771 18.936C222.771 20.9819 221.242 22.4482 219.108 22.4482C217.047 22.4482 215.443 20.9819 215.443 18.936C215.443 16.9324 217.047 15.4565 219.108 15.4565C221.234 15.4565 222.771 16.9247 222.771 18.936ZM216.074 24.78H222.125V44.5092H216.074V24.78ZM244.477 32.1669V44.5073H238.43V33.5296C238.43 31.3781 237.789 30.123 235.331 30.123C232.946 30.123 231.733 31.3033 231.733 34.0343V44.5073H225.683V24.7761H231.733V27.0024C233.156 25.2406 234.975 24.3117 237.393 24.3117C241.809 24.3117 244.477 27.3594 244.477 32.1669Z" fill="#1A474C" />
+                <path d="M26.2857 48.5291C27.9199 51.3983 29.5502 53.354 30.9708 55.989C31.7278 57.2979 30.1108 60.9137 28.6597 61.0173H23.3397L23.8354 58.9216C24.4551 58.198 25.0177 57.5436 25.5649 56.9179C25.2778 56.4073 24.9764 55.9049 24.6611 55.4114L26.2857 48.5291ZM62.2448 2.54345C61.9349 4.31953 61.1218 5.96767 59.9032 7.2896C58.5723 8.71748 56.6158 9.93809 53.0253 11.579C45.3598 15.0815 38.8918 18.2558 36.7314 19.2135C34.569 20.1712 33.2113 21.0176 32.6793 22.1729L33.2895 23.9635C34.7949 23.2118 36.3143 22.4887 37.8469 21.7948C48.9179 16.6955 56.1773 13.3408 58.5761 12.2142C60.0806 11.5099 61.3448 10.9341 61.3848 10.9399C61.4268 10.9437 61.3944 11.366 61.3124 11.8803C61.0036 13.6563 60.191 15.3046 58.9727 16.6265C57.6398 18.0543 55.6815 19.2749 52.0928 20.9158C47.6418 22.9468 43.2038 25.0068 38.7793 27.0956L39.7041 27.3355C40.7014 27.5927 41.6968 27.8537 42.694 28.1128C48.9599 25.2225 53.1359 23.288 54.8444 22.4857C56.3489 21.7795 57.6112 21.2056 57.6532 21.2095C57.6951 21.2152 57.6608 21.6375 57.5807 22.1499C57.2706 23.9265 56.4576 25.5752 55.2391 26.898C54.2018 28.0111 52.7831 28.9995 50.5082 30.1567C53.6908 30.9974 56.8714 31.8495 60.0481 32.7189C60.8719 32.9607 61.8272 33.5825 62.2887 34.3041C65.0059 38.4879 67.6488 42.7255 70.2821 46.9439L71.4834 48.8727C72.0784 49.8016 72.5398 50.2161 73.5619 49.3544C74.0844 48.9226 74.7708 48.4198 75.4973 48.4178C76.2238 48.4159 79.9136 50.3313 80.682 50.6978C79.7133 51.2697 76.6738 53.638 75.2666 53.6169C74.2484 53.6035 71.8743 52.8109 70.4843 51.2179C68.36 48.7863 63.8694 42.8886 61.7605 39.9177C61.4478 41.7621 60.8433 44.5699 61.7281 46.2549C62.7253 48.128 64.2718 49.6365 65.454 51.3868C65.7839 51.8705 65.9479 52.7648 65.7496 53.2811C64.6398 56.1944 63.1315 58.8889 61.9264 61.7543C61.7605 62.1324 61.2323 62.6697 60.9005 62.6697H54.5889C55.2334 61.1862 54.8615 59.3035 56.818 58.8256C58.1356 58.5147 59.7831 55.6225 59.2568 54.35C58.9651 53.5881 51.414 49.7632 50.3576 49.2508C49.0705 48.6309 49.0762 47.8421 49.1696 46.5313C49.2612 45.2454 49.3451 43.9308 49.4328 42.6392C42.9019 44.1361 36.3729 45.6427 29.821 47.0475C29.1955 47.1857 28.305 46.8748 27.8112 46.4276C27.0294 45.7444 26.3181 44.9767 25.5516 44.1515C25.1026 43.664 24.6468 43.1828 24.1844 42.7082C23.3549 47.5945 22.2566 52.5268 21.2955 57.3996C20.979 58.9983 19.9607 60.3821 19.1408 61.8214C18.9101 62.2015 18.4334 62.6697 18.0692 62.6697H12.5203C12.8578 60.4473 13.0008 59.5069 13.5557 59.0214C13.9695 58.6567 14.6159 58.555 15.7466 58.3784C14.2479 52.9817 12.7376 47.5868 11.2312 42.1901C10.1615 42.5931 9.43882 42.9002 7.81419 43.5066C7.20401 37.987 6.98091 34.2485 6.48322 28.5868C6.42983 26.6408 7.45952 24.6871 8.5121 23.9347C9.10321 23.5125 9.68671 23.3878 10.5181 23.0769H4.57257C3.40178 23.0769 3.25304 22.8005 2.89074 21.9388C2.08511 19.9723 1.21705 18.0322 0.287913 16.1217C-0.173541 15.1237 -0.139218 14.571 0.882846 13.9166C3.67062 12.158 6.44389 10.3763 9.20237 8.57162C11.1473 7.30688 13.0923 6.04213 15.0564 4.79082C15.5178 4.51446 16.21 4.51446 16.7382 4.61809C19.3753 5.20345 22.0106 5.82334 24.5829 6.5795C24.8594 6.66203 25.1397 6.72728 25.42 6.79445C26.8063 7.12072 28.1544 7.4393 28.7017 9.47364C29.3772 11.9419 30.1115 14.3934 30.9041 16.8261C31.7488 15.2926 36.2909 13.6057 38.7793 12.4599C49.8523 7.36061 57.1116 4.00587 59.5104 2.87931C61.0168 2.17305 62.2791 1.59921 62.3211 1.60305C62.3611 1.6088 62.3287 2.03103 62.2467 2.54345H62.2448ZM46.6088 46.656C45.7507 49.6864 47.6957 50.8226 49.6063 51.9261C49.9686 52.1084 50.5216 52.5498 50.3976 53.6131C50.1986 55.5463 49.9576 57.4749 49.675 59.3975L49.4747 60.8446C49.3756 61.6372 49.2345 62.2206 48.2219 62.2226H42.4557C43.1154 60.0846 43.6761 59.363 45.4532 58.6413C46.0062 58.3919 46.2026 58.0311 46.2541 57.6434C46.359 56.8488 46.0539 54.7128 45.3217 54.4383C43.9049 53.8875 42.4233 53.544 40.9378 53.2676C38.2034 52.7494 36.6189 51.3408 36.0602 48.652C39.5744 47.9803 43.0964 47.3431 46.6088 46.656Z" fill="#1A474C" />
+              </svg>
+            </div>
+            <div id="card2-firstletter" class="absolute m-auto font-serif text-[275px] leading-[1] text-green-3 -translate-1/2 left-[50%] top-[50%]">F</div>
+          </div>
+        </div> <!--/card2-->
+        <div class="card-3 absolute z-300 right-[-100px] bottom-[370px] rotate-[22deg]">
+          <div class="relative h-full z-100 p-10 flex flex-col justify-between">
+            <div id="card3-logo" class="absolute m-auto font-serif text-[275px] leading-[1] text-green-3 -translate-1/2 left-[50%] top-[50%]"><svg width="246" height="64" viewBox="0 0 246 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M105.444 25.2118V29.196H115.554V35.0073H105.447V44.5092H99.397V19.4024H116.549V25.2137H105.445L105.444 25.2118ZM138.939 24.778L138.907 44.5073H132.858V42.3905C131.613 43.9296 129.834 44.9737 127.344 44.9737C122.363 44.9737 118.515 40.7438 118.515 34.6388C118.515 28.5032 122.428 24.3059 127.304 24.3059C129.794 24.3059 131.645 25.3807 132.891 26.9947V24.7685H138.939V24.778ZM132.891 34.6484C132.891 31.9174 131.111 30.1249 128.758 30.1249C126.413 30.1249 124.634 31.9174 124.634 34.6484C124.634 37.4102 126.445 39.1701 128.758 39.1701C131.104 39.1624 132.891 37.4102 132.891 34.6465V34.6484ZM150.763 18.936C150.763 20.9819 149.234 22.4482 147.098 22.4482C145.039 22.4482 143.437 20.9819 143.437 18.936C143.437 16.9324 145.039 15.4565 147.098 15.4565C149.226 15.4565 150.763 16.9247 150.763 18.936ZM144.067 24.78H150.115V44.5092H144.067V24.78ZM168.098 24.4172V30.693C167.711 30.6604 167.46 30.6201 166.886 30.6201C164.039 30.6201 161.299 31.4837 161.299 35.965V44.4977H155.25V24.7761H161.299V27.8238C162.511 25.4191 164.502 24.3117 166.99 24.3117C167.452 24.3117 167.81 24.3443 168.098 24.4172ZM170.219 38.268H176.34C176.591 39.3428 177.375 40.3868 180.18 40.3868C182.211 40.3868 182.85 39.8494 182.85 39.0242C182.85 38.2354 182.243 38.055 178.904 37.3372C173.317 36.1166 171.035 34.6081 171.035 31.1363C171.035 26.8661 174.416 24.3558 180.075 24.3558C185.592 24.3558 188.301 26.7606 188.898 30.5241H182.777C182.525 29.5952 181.742 28.9446 179.825 28.9446C178.046 28.9446 177.158 29.482 177.158 30.3456C177.158 31.0308 177.73 31.0941 180.075 31.6008C185.916 32.8885 189.075 34.0784 189.075 38.1606C189.075 42.7167 185.128 44.9737 180.108 44.9737C174.805 44.9737 170.93 42.4327 170.219 38.268ZM212.873 34.6446C212.873 40.7419 209.034 44.9794 204.042 44.9794C201.554 44.9794 199.775 43.9354 198.49 42.3962V51.9576H192.439V24.7761H198.49V27.0024C199.735 25.3864 201.584 24.3117 204.077 24.3117C208.96 24.3117 212.873 28.509 212.873 34.6446ZM206.752 34.6446C206.752 31.9155 204.973 30.1211 202.627 30.1211C200.276 30.1211 198.497 31.9155 198.497 34.6446C198.497 37.4082 200.276 39.1681 202.627 39.1681C204.933 39.1605 206.752 37.4082 206.752 34.6446ZM222.771 18.936C222.771 20.9819 221.242 22.4482 219.108 22.4482C217.047 22.4482 215.443 20.9819 215.443 18.936C215.443 16.9324 217.047 15.4565 219.108 15.4565C221.234 15.4565 222.771 16.9247 222.771 18.936ZM216.074 24.78H222.125V44.5092H216.074V24.78ZM244.477 32.1669V44.5073H238.43V33.5296C238.43 31.3781 237.789 30.123 235.331 30.123C232.946 30.123 231.733 31.3033 231.733 34.0343V44.5073H225.683V24.7761H231.733V27.0024C233.156 25.2406 234.975 24.3117 237.393 24.3117C241.809 24.3117 244.477 27.3594 244.477 32.1669Z" fill="#1A474C" />
+                <path d="M26.2857 48.5291C27.9199 51.3983 29.5502 53.354 30.9708 55.989C31.7278 57.2979 30.1108 60.9137 28.6597 61.0173H23.3397L23.8354 58.9216C24.4551 58.198 25.0177 57.5436 25.5649 56.9179C25.2778 56.4073 24.9764 55.9049 24.6611 55.4114L26.2857 48.5291ZM62.2448 2.54345C61.9349 4.31953 61.1218 5.96767 59.9032 7.2896C58.5723 8.71748 56.6158 9.93809 53.0253 11.579C45.3598 15.0815 38.8918 18.2558 36.7314 19.2135C34.569 20.1712 33.2113 21.0176 32.6793 22.1729L33.2895 23.9635C34.7949 23.2118 36.3143 22.4887 37.8469 21.7948C48.9179 16.6955 56.1773 13.3408 58.5761 12.2142C60.0806 11.5099 61.3448 10.9341 61.3848 10.9399C61.4268 10.9437 61.3944 11.366 61.3124 11.8803C61.0036 13.6563 60.191 15.3046 58.9727 16.6265C57.6398 18.0543 55.6815 19.2749 52.0928 20.9158C47.6418 22.9468 43.2038 25.0068 38.7793 27.0956L39.7041 27.3355C40.7014 27.5927 41.6968 27.8537 42.694 28.1128C48.9599 25.2225 53.1359 23.288 54.8444 22.4857C56.3489 21.7795 57.6112 21.2056 57.6532 21.2095C57.6951 21.2152 57.6608 21.6375 57.5807 22.1499C57.2706 23.9265 56.4576 25.5752 55.2391 26.898C54.2018 28.0111 52.7831 28.9995 50.5082 30.1567C53.6908 30.9974 56.8714 31.8495 60.0481 32.7189C60.8719 32.9607 61.8272 33.5825 62.2887 34.3041C65.0059 38.4879 67.6488 42.7255 70.2821 46.9439L71.4834 48.8727C72.0784 49.8016 72.5398 50.2161 73.5619 49.3544C74.0844 48.9226 74.7708 48.4198 75.4973 48.4178C76.2238 48.4159 79.9136 50.3313 80.682 50.6978C79.7133 51.2697 76.6738 53.638 75.2666 53.6169C74.2484 53.6035 71.8743 52.8109 70.4843 51.2179C68.36 48.7863 63.8694 42.8886 61.7605 39.9177C61.4478 41.7621 60.8433 44.5699 61.7281 46.2549C62.7253 48.128 64.2718 49.6365 65.454 51.3868C65.7839 51.8705 65.9479 52.7648 65.7496 53.2811C64.6398 56.1944 63.1315 58.8889 61.9264 61.7543C61.7605 62.1324 61.2323 62.6697 60.9005 62.6697H54.5889C55.2334 61.1862 54.8615 59.3035 56.818 58.8256C58.1356 58.5147 59.7831 55.6225 59.2568 54.35C58.9651 53.5881 51.414 49.7632 50.3576 49.2508C49.0705 48.6309 49.0762 47.8421 49.1696 46.5313C49.2612 45.2454 49.3451 43.9308 49.4328 42.6392C42.9019 44.1361 36.3729 45.6427 29.821 47.0475C29.1955 47.1857 28.305 46.8748 27.8112 46.4276C27.0294 45.7444 26.3181 44.9767 25.5516 44.1515C25.1026 43.664 24.6468 43.1828 24.1844 42.7082C23.3549 47.5945 22.2566 52.5268 21.2955 57.3996C20.979 58.9983 19.9607 60.3821 19.1408 61.8214C18.9101 62.2015 18.4334 62.6697 18.0692 62.6697H12.5203C12.8578 60.4473 13.0008 59.5069 13.5557 59.0214C13.9695 58.6567 14.6159 58.555 15.7466 58.3784C14.2479 52.9817 12.7376 47.5868 11.2312 42.1901C10.1615 42.5931 9.43882 42.9002 7.81419 43.5066C7.20401 37.987 6.98091 34.2485 6.48322 28.5868C6.42983 26.6408 7.45952 24.6871 8.5121 23.9347C9.10321 23.5125 9.68671 23.3878 10.5181 23.0769H4.57257C3.40178 23.0769 3.25304 22.8005 2.89074 21.9388C2.08511 19.9723 1.21705 18.0322 0.287913 16.1217C-0.173541 15.1237 -0.139218 14.571 0.882846 13.9166C3.67062 12.158 6.44389 10.3763 9.20237 8.57162C11.1473 7.30688 13.0923 6.04213 15.0564 4.79082C15.5178 4.51446 16.21 4.51446 16.7382 4.61809C19.3753 5.20345 22.0106 5.82334 24.5829 6.5795C24.8594 6.66203 25.1397 6.72728 25.42 6.79445C26.8063 7.12072 28.1544 7.4393 28.7017 9.47364C29.3772 11.9419 30.1115 14.3934 30.9041 16.8261C31.7488 15.2926 36.2909 13.6057 38.7793 12.4599C49.8523 7.36061 57.1116 4.00587 59.5104 2.87931C61.0168 2.17305 62.2791 1.59921 62.3211 1.60305C62.3611 1.6088 62.3287 2.03103 62.2467 2.54345H62.2448ZM46.6088 46.656C45.7507 49.6864 47.6957 50.8226 49.6063 51.9261C49.9686 52.1084 50.5216 52.5498 50.3976 53.6131C50.1986 55.5463 49.9576 57.4749 49.675 59.3975L49.4747 60.8446C49.3756 61.6372 49.2345 62.2206 48.2219 62.2226H42.4557C43.1154 60.0846 43.6761 59.363 45.4532 58.6413C46.0062 58.3919 46.2026 58.0311 46.2541 57.6434C46.359 56.8488 46.0539 54.7128 45.3217 54.4383C43.9049 53.8875 42.4233 53.544 40.9378 53.2676C38.2034 52.7494 36.6189 51.3408 36.0602 48.652C39.5744 47.9803 43.0964 47.3431 46.6088 46.656Z" fill="#1A474C" />
+              </svg>
+            </div>
+            <div id="card3-firstletter-1" class="font-serif text-green-3 text-[65px] leading-[40px]">F</div>
+            <div id="card3-firstletter-2" class="font-serif text-green-3 text-[65px] leading-[40px] rotate-[180deg] absolute bottom-[30px] right-[30px]">F</div>
+          </div>
+        </div> <!--/card3-->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
