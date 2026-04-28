@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Gupter:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap');
+
+    h1 {
+      background: linear-gradient(97.56deg, rgba(60, 99, 102, 0) 28.49%, #3C6366 89.18%), #F9F3F1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    table thead {
+      border-bottom: 3px solid #F9F3F1;
+    }
+
+    table th {
+      height: 100px;
+    }
+
+    table td {
+      /* min-height: 85px; */
+      vertical-align: baseline;
+      font-size: 31px;
+      line-height: 1.25;
+      padding-top: 45px;
+      padding-bottom: 10px;
+      padding-right: 40px;
+    }
+
+    .table-bottom {
+      background: rgba(255, 250, 245, 0.22);
+      border-width: 2px 0px 1px 0px;
+      border-style: solid;
+      border-color: #F9F3F1;
+      backdrop-filter: blur(20px);
+      border-radius: 42px;
+      position: relative;
+    }
+
+    .table-bottom td {
+      padding-top: 10px;
+      vertical-align: middle;
+      height: 110px;
+    }
+
+    .table-bottom::after {
+      content: '€';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: #1F494F;
+      font-weight: 500;
+      padding-right: 7px;
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      width: 75px;
+      height: 75px;
+      background: linear-gradient(318.05deg, rgba(36, 73, 74, 0) 2.95%, #467374 222.83%), #F9F3F1;
+      backdrop-filter: blur(14.35px);
+      border-radius: 42px;
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @theme {  
+    --color-light: #F9F3F1;
+    --color-dark: #1C4243;
+    --color-green-1: #1A474C;
+    --color-green-2: #75989B;
+    --color-green-3: #1A474C;
+    --color-green-4: #649798;
+    --color-green-5: #24494A;
+    --font-sans: 'Geist', sans-serif;
+    --font-serif: 'Gupter', sans-serif;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="overflow-hidden w-[1920px] h-[1080px] bg-[#24494A]">
+
+    <div class="absolute z-1 left-0 top-0 w-[1920px] h-[1080px]">
+      <img alt="" src="https://dl.dropboxusercontent.com/scl/fi/t2i1flxuxw7psmqew5395/bg-12.jpg?rlkey=xdwkcuoi90svb1269xba20gj1&st=ib0gy5oh&dl=0" width="1920" height="1080" />
+    </div>
+    <div class="relative z-100 tracking-tight w-full h-full font-sans text-light pl-[54px] pt-[26px] pb-[62px] pr-[32px] flex flex-col">
+
+      <div class="flex text-green-4 text-[22px] leading-[36px] ">
+        <span id="header-left" class="w-[1042px] shrink-0 pr-4">Shittest / Canada market readiness & platform assessment</span>
+        <span id="header-middle" class="pr-4">Fairspin</span>
+        <span id="header-right" class="ml-auto">Jul’ 2026</span>
+      </div>
+
+      <div class="flex align-top mt-[90px]">
+        <h1 id="main-title" class="w-[1042px] shrink-0 pr-4 text-[102px] font-medium tracking-[-0.04em] leading-[87px]"><span class="font-serif text-[122px] leading-[96px]">Total</span> project <br>investment</h1>
+      </div>
+
+      <table id="investment-table" class="mt-auto">
+        <thead>
+          <tr class="text-left font-medium text-[46px] leading-[0.9] border-b">
+            <th id="col-header-1" class="font-medium">Component</th>
+            <th id="col-header-2" class="w-[305px] font-medium">Amount (€)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="row-1-col-1">Total Testing Service Fees</td>
+            <td id="row-1-col-2" class="w-[305px]">2,370.45</td>
+          </tr>
+          <tr>
+            <td id="row-2-col-1">Market Intelligence Reports</td>
+            <td id="row-2-col-2">2,782.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="mt-[30px]">
+        <tbody>
+          <tr>
+            <td id="row-3-col-1" class="font-semibold">+30% E2E PWA Surcharge</td>
+            <td id="row-3-col-2" class="w-[305px] font-semibold">479.52</td>
+          </tr>
+          <tr>
+            <td id="row-4-col-1" class="font-semibold">Deposit Funding (Non-Refundable)</td>
+            <td id="row-4-col-2" class="font-semibold">326.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-bottom mt-[30px]">
+        <table id="investment-table-footer" class="w-full font-medium text-[36px]">
+          <tbody>
+            <tr>
+              <td id="row-5-col-1" class="pl-[36px]">TOTAL UPFRONT INVESTMENT</td>
+              <td id="row-5-col-2" class="w-[305px]">5,957.97</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem & Solution (N-O-S-E) - Template</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .container {
+      background-color: #f9f3f1;
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      margin: 0 auto;
+    }
+
+    .bg-image {
+      position: absolute;
+      height: 1080px;
+      left: 0;
+      top: 0;
+      width: 1920px;
+    }
+
+    .bg-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    /* Header Text */
+    .header-text {
+      position: absolute;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      height: 31px;
+      left: 54px;
+      color: #f9f3f1;
+      font-size: 22px;
+      top: 26px;
+      text-transform: uppercase;
+      width: 1805.023px;
+    }
+
+    .header-left {
+      position: absolute;
+      inset: 0 58.36% 0 0;
+      line-height: 1.4;
+      opacity: 0.5;
+    }
+
+    .header-number {
+      position: absolute;
+      inset: 0 0 0 98.73%;
+      line-height: 1.4;
+      opacity: 0.5;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .header-center {
+      position: absolute;
+      inset: 0 23.38% 0 57.51%;
+      line-height: 1.4;
+      opacity: 0.5;
+      white-space: nowrap;
+    }
+
+    /* Section Blocks */
+    .section-block {
+      position: absolute;
+      width: 311px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .section-header {
+      font-family: 'Gupter', serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 0px;
+      letter-spacing: -0.96px;
+      margin-bottom: 30px;
+    }
+
+    .first-letter {
+      line-height: 29.333px;
+      color: #f9f3f1;
+      font-size: 62px;
+    }
+
+    .rest-word {
+      line-height: 29.333px;
+      font-size: 48px;
+      color: #f9f3f1;
+    }
+
+    .section-content {
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      color: #f9f3f1;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+      line-height: 29.333px;
+    }
+
+    /* Needs Section */
+    .needs-block {
+      left: 146px;
+      bottom: 149px;
+    }
+
+    .needs-header .first-letter {
+      letter-spacing: -4.34px;
+    }
+
+    /* Outcomes Section */
+    .outcomes-block {
+      left: 563px;
+      bottom: 149px;
+    }
+
+    /* Solution Section */
+    .solution-block {
+      left: 1010px;
+      bottom: 149px;
+    }
+
+    .solution-header .first-letter {
+      letter-spacing: 0.62px;
+    }
+
+    /* Evidence Section */
+    .evidence-block {
+      left: 1456px;
+      top: 156px;
+      bottom: 149px;
+      justify-content: flex-start;
+    }
+
+    .big-number {
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      color: #f9f3f1;
+      font-size: 121.052px;
+      letter-spacing: -2.421px;
+      line-height: 177.542px;
+      margin-bottom: auto;
+    }
+
+    .evidence-header {
+      margin-bottom: 30px;
+      margin-top: auto;
+    }
+
+    .evidence-content {
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      color: #f9f3f1;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+      line-height: 29.333px;
+    }
+
+    .evidence-highlight {
+      font-family: 'Geist', sans-serif;
+      font-weight: 600;
+      color: #f9f3f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Background Image -->
+    <div class="bg-image">
+      <img 
+        alt="" 
+        src="https://www.dropbox.com/scl/fi/qltls6o6xdk1zrnpxphp3/5bg.png?rlkey=o785jtrge7yq8j72hkpiw48lp&st=109o2jhm&dl=1" 
+      />
+    </div>
+
+    <!-- Header Text -->
+    <div class="header-text">
+      <p id="header-left" class="header-left">Shittest / Canada market readiness & platform assessment</p>
+      <p id="header-middle"  class="header-center">Problem & solution (N-o-s-e)</p>
+      <p id="page-number" class="header-number">05</p>
+    </div>
+
+    <!-- Needs Section -->
+    <div class="section-block needs-block">
+      <div id="card-1-title" class="section-header needs-header">
+        <span class="first-letter">N</span><span class="rest-word">eeds</span>
+      </div>
+      <div id="card-1-text" class="section-content">
+        Fairspin requires confirmation that provincial session transitions (Ontario ↔ Alberta) work without breakage, that the PWA install flow is leak-proof, and that the 12 mandatory game providers meet local speed benchmarks.
+      </div>
+    </div>
+
+    <!-- Outcomes Section -->
+    <div class="section-block outcomes-block">
+      <div id="card-2-title" class="section-header outcomes-header">
+        <span class="first-letter">O</span><span class="rest-word">utcomes</span>
+      </div>
+      <div id="card-2-text" class="section-content">
+        A "Launch Ready" certification proving that marketing promises (Bonus "TestCA", x30 wagering) match actual system behavior across all platforms.
+      </div>
+    </div>
+
+    <!-- Solution Section -->
+    <div class="section-block solution-block">
+      <div id="card-3-title" class="section-header solution-header">
+        <span class="first-letter">S</span><span class="rest-word">olution</span>
+      </div>
+      <div id="card-3-text" class="section-content">
+        Deployment of real local testers using genuine bank accounts (RBC, TD, Scotiabank) to trigger authentic fraud checks and verify Interac/Tether routing.
+      </div>
+    </div>
+
+    <!-- Evidence Section -->
+    <div class="section-block evidence-block">
+      <div id="card-4-stat" class="big-number">+22%</div>
+      <div id="card-4-title" class="section-header evidence-header">
+        <span class="first-letter">E</span><span class="rest-word">vidence</span>
+      </div>
+      <div id="card-4-text" class="evidence-content">
+        SHITTEST has historically delivered a <span class="evidence-highlight">+22% approval rate increase</span> for similar Tier 2 high-risk launches through deep technical logging and localization audits.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust & Results - Template</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .container {
+      background-color: #f9f3f1;
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      margin: 0 auto;
+    }
+
+    .bg-image {
+      position: absolute;
+      height: 1080px;
+      left: 0;
+      top: 0;
+      width: 1920px;
+    }
+
+    .bg-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    /* Header Text */
+    .header-text {
+      position: absolute;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      height: 31px;
+      left: 54px;
+      mix-blend-mode: multiply;
+      color: #649798;
+      font-size: 22px;
+      top: 26px;
+      text-transform: uppercase;
+      width: 1805.023px;
+    }
+
+    .header-left {
+      position: absolute;
+      inset: 0 58.36% 0 0;
+      line-height: 1.4;
+      opacity: 0.5;
+    }
+
+    .header-number {
+      position: absolute;
+      inset: 0 0 0 98.73%;
+      line-height: 1.4;
+      opacity: 0.5;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .header-center {
+      position: absolute;
+      inset: 0 23.38% 0 57.51%;
+      line-height: 1.4;
+      opacity: 0.5;
+      white-space: nowrap;
+    }
+
+    /* Main Headline */
+    .main-headline {
+      transform: translateY(-50%);
+      position: absolute;
+      background-clip: text;
+      -webkit-background-clip: text;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 400;
+      justify-content: center;
+      line-height: 0;
+      left: 53px;
+      font-size: 0px;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      top: 181px;
+      letter-spacing: -4.5534px;
+      width: 764px;
+      background-image: linear-gradient(173.934deg, rgba(140, 171, 171, 0) 2.7511%, rgb(140, 171, 171) 140.07%), linear-gradient(90deg, rgb(251, 246, 245) 0%, rgb(251, 246, 245) 100%);
+    }
+
+    .main-headline p {
+      margin: 0;
+    }
+
+    .word-trust {
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family: 'Geist', sans-serif;
+      font-weight: 500;
+      line-height: 109.508px;
+      font-size: 113.836px;
+      background-image: linear-gradient(173.934deg, rgba(140, 171, 171, 0) 2.7511%, rgb(140, 171, 171) 140.07%), linear-gradient(90deg, rgb(251, 246, 245) 0%, rgb(251, 246, 245) 100%);
+    }
+
+    .word-space {
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      line-height: 109.508px;
+      font-size: 113.836px;
+      background-image: linear-gradient(173.934deg, rgba(140, 171, 171, 0) 2.7511%, rgb(140, 171, 171) 140.07%), linear-gradient(90deg, rgb(251, 246, 245) 0%, rgb(251, 246, 245) 100%);
+    }
+
+    .word-ampersand {
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family: 'Gupter', serif;
+      font-weight: 500;
+      line-height: 109.508px;
+      font-style: normal;
+      font-size: 139.593px;
+      letter-spacing: -5.5837px;
+      background-image: linear-gradient(173.934deg, rgba(140, 171, 171, 0) 2.7511%, rgb(140, 171, 171) 140.07%), linear-gradient(90deg, rgb(251, 246, 245) 0%, rgb(251, 246, 245) 100%);
+    }
+
+    .word-results {
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family: 'Gupter', serif;
+      font-weight: 500;
+      line-height: 109.508px;
+      font-style: normal;
+      font-size: 139.593px;
+      background-image: linear-gradient(173.934deg, rgba(140, 171, 171, 0) 2.7511%, rgb(140, 171, 171) 140.07%), linear-gradient(90deg, rgb(251, 246, 245) 0%, rgb(251, 246, 245) 100%);
+    }
+
+    /* Subheadline */
+    .subheadline {
+      transform: translateY(-50%);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Geist', sans-serif;
+      font-weight: 500;
+      justify-content: center;
+      line-height: 0;
+      left: 66px;
+      color: #faf6f4;
+      font-size: 36px;
+      top: 289px;
+      letter-spacing: -1.8px;
+      width: 689px;
+    }
+
+    .subheadline p {
+      line-height: 0.9;
+      margin-bottom: 0;
+    }
+
+    /* Top Right Description */
+    .top-right-desc {
+      transform: translateY(-50%);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      justify-content: center;
+      line-height: 0;
+      left: 1501px;
+      color: #8aa9ac;
+      font-size: 24px;
+      top: 186px;
+      letter-spacing: -0.48px;
+      width: 315px;
+    }
+
+    .top-right-desc p {
+      line-height: 27px;
+    }
+
+    .column {
+      position: absolute;
+      top: 510px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      min-height: 530px;
+    }
+
+    /* Column Headers */
+    .column-header {
+      /* transform: translateY(-50%);
+      position: absolute;
+      top: 554px; */
+      display: flex;
+      flex-direction: column;
+      font-family: 'Gupter', serif;
+      font-weight: 700;
+      justify-content: center;
+      line-height: 0;
+      font-style: normal;
+      color: #375d5f;
+      font-size: 46px;
+    }
+
+    .column-header p {
+      line-height: 45px;
+    }
+
+    .col1-header {
+      left: 53px;
+      width: 410px;
+      letter-spacing: -1.38px;
+    }
+
+    .col2-header {
+      left: 566px;
+      width: 320px;
+      letter-spacing: -0.92px;
+    }
+
+    .col3-header {
+      left: 1007px;
+      width: 333px;
+      letter-spacing: -0.92px;
+    }
+
+    .col4-header {
+      left: 1483px;
+      width: 337px;
+      letter-spacing: -0.92px;
+    }
+
+
+
+    /* Column Content */
+    .column-content {
+      /* transform: translateY(-50%); */
+      /* position: absolute; */
+      /* display: flex;
+      flex-direction: column; */
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      justify-content: center;
+      line-height: 0;
+      color: #264b4c;
+      font-size: 24px;
+      letter-spacing: -0.48px;
+    }
+
+    .column-content p {
+      line-height: 27px;
+      margin-bottom: 20px;
+    }
+
+    .column-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .col1 {
+      left: 53px;
+    }
+
+    .col2 {
+      left: 556px;
+    }
+
+    .col3 {
+      left: 1007px;
+    }
+
+    .col4 {
+      left: 1481px;
+    }
+
+    .col1-content {
+      /* left: 53px; */
+      width: 345px;
+      /* height: 169px; */
+      /* top: 736.5px;  */
+      top: 690px;
+    }
+
+    .col2-content {
+      /* left: 566px; */
+      width: 320px;
+      /* top: 737px;  */
+      top: 690px;
+    }
+
+    .col3-content {
+      /* left: 1007px; */
+      width: 333px;
+      /* top: 737px; */
+      /* top: 690px */
+    }
+
+    .col4-content {
+      /* left: 1481px; */
+      width: 339px;
+      /* top: 737px; */
+    }
+
+    /* Big Numbers */
+    .big-number {
+      margin-top: auto;
+      /* transform: translateY(-50%);
+      position: absolute; */
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      justify-content: center;
+      line-height: 0;
+      font-size: 120px;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -4.8px;
+      white-space: nowrap;
+    }
+
+    .big-number p {
+      line-height: 150.687px;
+    }
+
+    .big-number-1 {
+      left: 53px;
+      top: 955.5px;
+      background-image: linear-gradient(221.591deg, rgba(140, 171, 171, 0) 33.457%, rgb(140, 171, 171) 118.32%), linear-gradient(90deg, rgb(28, 66, 67) 0%, rgb(28, 66, 67) 100%);
+    }
+
+    .big-number-2 {
+      left: 558px;
+      top: 955.5px;
+      background-image: linear-gradient(203.083deg, rgba(140, 171, 171, 0) 25.246%, rgb(140, 171, 171) 118.22%), linear-gradient(90deg, rgb(28, 66, 67) 0%, rgb(28, 66, 67) 100%);
+    }
+
+    .big-number-3 {
+      left: 1005px;
+      top: 955.5px;
+      background-image: linear-gradient(216.049deg, rgba(140, 171, 171, 0) 29.96%, rgb(140, 171, 171) 121.83%), linear-gradient(90deg, rgb(28, 66, 67) 0%, rgb(28, 66, 67) 100%);
+    }
+
+    .big-number-4 {
+      left: 1481px;
+      top: 963.5px;
+      background-image: linear-gradient(230.797deg, rgba(140, 171, 171, 0) 19.106%, rgb(140, 171, 171) 103.4%), linear-gradient(90deg, rgb(28, 66, 67) 0%, rgb(28, 66, 67) 100%);
+    }
+
+    /* Dividers */
+    .divider {
+      position: absolute;
+      display: flex;
+      height: 501px;
+      align-items: center;
+      justify-content: center;
+      top: 519px;
+      width: 0;
+      z-index: 100;
+    }
+
+    .divider-inner {
+      transform: rotate(-90deg);
+      flex: none;
+    }
+
+    .divider-line {
+      height: 0;
+      position: relative;
+      width: 501px;
+    }
+
+    .divider svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .divider-1 {
+      left: 482px;
+    }
+
+    .divider-2 {
+      left: 952px;
+    }
+
+    .divider-3 {
+      left: 1422px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Background Image -->
+    <div class="bg-image">
+      <img alt="" src="https://www.dropbox.com/scl/fi/0t6uifuk3192tz48fxdeo/78694998.png?rlkey=ij1cxn8u0ljm3nqgr50l911yw&st=4fvgazav&dl=1" />
+    </div>
+
+    <!-- Header Text -->
+    <div class="header-text">
+      <p id="header-left" class="header-left">Shittest / Canada market readiness & platform assessment</p>
+      <p id="header-middle" class="header-number">04</p>
+      <p id="page-number" class="header-center">Trust & results</p>
+    </div>
+
+    <!-- Main Headline -->
+    <div class="main-headline">
+      <p id="main-title">
+        <span class="word-trust">Trust </span><span class="word-ampersand">&</span><span class="word-space"> </span><span class="word-results">results</span>
+      </p>
+    </div>
+
+    <!-- Subheadline -->
+    <div class="subheadline">
+      <p id="subtitle">Quiet work. Loud results. Quiet work. Loud results.</p>
+      <p>&nbsp;</p>
+    </div>
+
+    <!-- Top Right Description -->
+    <div class="top-right-desc">
+      <p id="side-note">Exclusively focused on iGaming quality assurance.</p>
+    </div>
+
+    <div class="column col1">
+      <!-- Column 1 Header -->
+      <div class="column-header col1-header">
+        <p id="column-1-title">Payment optimization impact</p>
+      </div>
+
+      <!-- Column 1 Content -->
+      <div class="column-content col1-content">
+        <p id="col-1-bullet-1">+27 % approval rate increase</p>
+        <p id="col-1-bullet-2">€4.2M additional annual revenue recovered</p>
+        <p id="col-1-bullet-3">Reduced failed deposits across 12 PSP integrations within 60 days</p>
+      </div>
+
+      <!-- Column 1 Big Number -->
+      <div class="big-number big-number-1">
+        <p id="col-1-stat">+27 %</p>
+      </div>
+    </div>
+
+    <!-- Divider 1 -->
+    <div class="divider divider-1">
+      <div class="divider-inner">
+        <div class="divider-line">
+          <svg fill="none" preserveAspectRatio="none" viewBox="0 0 501 1">
+            <path d="M0 0.5H501" stroke="#CFD6CF" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col2">
+      <!-- Column 2 Header -->
+      <div class="column-header col2-header">
+        <p id="column-2-title">Faster go-live execution</p>
+      </div>
+
+      <!-- Column 2 Content -->
+      <div class="column-content col2-content">
+        <p id="col-2-bullet-1">–38 % time to market</p>
+        <p id="col-2-bullet-2">€1.1M earlier revenue capture per launch</p>
+        <p id="col-2-bullet-3">Eliminated critical onboarding & KYC bottlenecks pre-production.</p>
+      </div>
+
+      <!-- Column 2 Big Number -->
+      <div class="big-number big-number-2">
+        <p id="col-2-stat">€1.1M</p>
+      </div>
+    </div>
+
+    <!-- Divider 2 -->
+    <div class="divider divider-2">
+      <div class="divider-inner">
+        <div class="divider-line">
+          <svg fill="none" preserveAspectRatio="none" viewBox="0 0 501 1">
+            <path d="M0 0.5H501" stroke="#CFD6CF" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="column col3">
+
+      <!-- Column 3 Header -->
+      <div class="column-header col3-header">
+        <p id="column-3-title">Bonus & wallet error prevention</p>
+      </div>
+
+      <!-- Column 3 Content -->
+      <div class="column-content col3-content">
+        <p id="col-3-bullet-1">92 % reduction in bonus misconfigurations</p>
+        <p id="col-3-bullet-2">€870,000 prevented promotional leakage</p>
+        <p id="col-3-bullet-3">Detected wallet edge-case failures before live campaigns</p>
+      </div>
+
+      <!-- Column 3 Big Number -->
+      <div class="big-number big-number-3">
+        <p id="col-3-stat">92 %</p>
+      </div>
+    </div>
+
+    <!-- Divider 3 -->
+    <div class="divider divider-3">
+      <div class="divider-inner">
+        <div class="divider-line">
+          <svg fill="none" preserveAspectRatio="none" viewBox="0 0 501 1">
+            <path d="M0 0.5H501" stroke="#CFD6CF" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col4">
+
+      <!-- Column 4 Header -->
+      <div class="column-header col4-header">
+        <p id="column-4-title">Performance & stability gains</p>
+      </div>
+
+      <!-- Column 4 Content -->
+      <div class="column-content col4-content">
+        <p id="col-4-bullet-1">–41 % crash & latency Incidents</p>
+        <p id="col-4-bullet-2">€3.6M revenue safeguarded during peak traffic</p>
+        <p id="col-4-bullet-3">Stabilized live dealer & slot performance under real-user load</p>
+      </div>
+
+      <!-- Column 4 Big Number -->
+      <div class="big-number big-number-4">
+        <p id="col-4-stat">€3.6M</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
